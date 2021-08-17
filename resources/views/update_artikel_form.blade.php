@@ -16,6 +16,16 @@
             <label for="exampleInputPassword1" class="form-label">Content</label>
             <textarea class="form-control" name="content"  placeholder="Lorem ipsum">{{$artikel->content}}</textarea>
         </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" name="image" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
+        </div>
+{{--        <img src="{{'/storage/'.$artikel->image}}" alt="image-{{$artikel->image}}">--}}
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 @endsection

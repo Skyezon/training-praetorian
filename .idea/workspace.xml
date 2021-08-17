@@ -23,17 +23,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd9723f7-422d-4ed3-b407-3bd82aeac934" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/show_artikels.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kakek-guru.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kakek-guru.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/show_one_artikel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/show_user_artikel.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Artikel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Artikel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArtikelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArtikelController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ArtikelRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ArtikelRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_08_050438_create_artikels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_08_08_050438_create_artikels_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/create_artikel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create_artikel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/show_artikels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show_artikels.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/layout.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/update_artikel_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/update_artikel_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +179,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kakek-guru - Copy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -193,6 +207,8 @@
       <workItem from="1628506861358" duration="610000" />
       <workItem from="1628510624037" duration="7448000" />
       <workItem from="1628666478824" duration="595000" />
+      <workItem from="1628683096475" duration="8901000" />
+      <workItem from="1629116498590" duration="7299000" />
     </task>
     <servers />
   </component>
@@ -224,13 +240,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1628394916388" />
+    <state x="501" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628689056566">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="501" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1628689056566" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1628516077331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1628516077331" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1628516877927">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1629123543469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1628516877927" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1629123543469" />
   </component>
 </project>

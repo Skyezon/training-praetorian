@@ -20,11 +20,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('artikel')->group(function () {
-    Route::get("create","ArtikelController@showForm")->name('showArtikelForm');
-    Route::post("create","ArtikelController@store")->name("storeArtikel");
+    Route::middleware('auth')->group(function (){
+        Route::middleware('artikel.user')->group(function (){
+            Route::get('update/{id}','ArtikelController@showUpdateForm')->name('showUpdateArtikelForm');
+            Route::patch('update/{id}','ArtikelController@update')->name('updateArtikel');
+            Route::delete('delete/{id}','ArtikelController@delete')->name('deleteArtikel');
+        });
+        Route::get("create","ArtikelController@showForm")->name('showArtikelForm');
+        Route::post("create","ArtikelController@store")->name("storeArtikel");
+
+        Route::post('comment/{id}','CommentController@store')->name('postComment');
+
+        Route::get('my','ArtikelController@showMy')->name('showMyArtikel');
+    });
+
     Route::get('/','ArtikelController@index')->name('showArtikels');
-    Route::get('update/{id}','ArtikelController@showUpdateForm')->name('showUpdateArtikelForm');
-    Route::patch('update/{id}','ArtikelController@update')->name('updateArtikel');
-    Route::delete('delete/{id}','ArtikelController@delete')->name('deleteArtikel');
+    Route::get('{id}','ArtikelController@show')->name('showOneArtikel');
 });
 

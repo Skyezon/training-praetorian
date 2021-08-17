@@ -24,8 +24,10 @@ class ArtikelRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:8',
-            'content' => 'required|min:8',
+            'title' => 'required',
+            'content' => 'required|max:1000',
+            'author' => 'required',
+            'image' => 'required'
         ];
     }
 
